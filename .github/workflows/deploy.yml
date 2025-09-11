@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
     branches:
-      - '*'
+      - "*"
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
       - name: Install the dependencies
         run: |
           python -m pip install -r requirements.txt
@@ -25,6 +25,7 @@ jobs:
         run: |
           jupyter lite build --apps repl --lite-dir repl --config repl/jupyter-lite.json --output-dir dist/repl
           jupyter lite build --lite-dir week-1 --contents week-1 --output-dir dist/week-1
+          jupyter lite build --lite-dir week-2 --contents week-2 --output-dir dist/week-2
           cp -r home/* dist/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -46,4 +47,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
