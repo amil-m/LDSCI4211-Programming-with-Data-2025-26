@@ -26,6 +26,7 @@ jobs:
           jupyter lite build --apps repl --lite-dir repl --config repl/jupyter-lite.json --output-dir dist/repl
           jupyter lite build --lite-dir week-1 --contents week-1 --output-dir dist/week-1
           jupyter lite build --lite-dir week-2 --contents week-2 --output-dir dist/week-2
+          jupyter lite build --lite-dir week-3 --contents week-3 --output-dir dist/week-3
           cp -r home/* dist/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
