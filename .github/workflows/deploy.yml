@@ -29,6 +29,7 @@ jobs:
           jupyter lite build --lite-dir week-3 --contents week-3 --output-dir dist/week-3
           jupyter lite build --lite-dir week-4 --contents week-4 --output-dir dist/week-4
           jupyter lite build --lite-dir week-5 --contents week-5 --output-dir dist/week-5
+          jupyter lite build --lite-dir week-6 --contents week-6 --output-dir dist/week-6
           jupyter lite build --lite-dir ae1 --contents ae1 --output-dir dist/ae1
           cp -r home/* dist/
       - name: Upload artifact
